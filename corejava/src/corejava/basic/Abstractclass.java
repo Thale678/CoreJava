@@ -1,7 +1,7 @@
 package corejava.basic;
 //Abstract class can have abstract as well as non abstract methods.But we can define abstract methods 
 
-//inside abstract class only.Any class extending abstract class that calss have to provde
+//inside abstract    class only.Any class extending abstract class that calss have to provde
 
 //implementation of all abstract methods
 
