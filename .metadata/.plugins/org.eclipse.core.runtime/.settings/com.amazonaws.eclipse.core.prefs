@@ -1,0 +1,9 @@
+cognitoIdentityId=us-east-1\:622b0cc5-14b3-c82c-d653-47e46e6c2f6e
+cognitoIdentityPoolId=us-east-1\:d4fdc07f-94fd-4cc6-94fb-f903657f05c1
+credentialProfileAccountIds=f583d29c-1d8b-4a71-9c8b-8749e2f68ffc
+currentAccount=f583d29c-1d8b-4a71-9c8b-8749e2f68ffc
+currentDefaultAccount=f583d29c-1d8b-4a71-9c8b-8749e2f68ffc
+defaultRegion=ap-south-1
+ec2PreferencesImported=true
+eclipse.preferences.version=1
+f583d29c-1d8b-4a71-9c8b-8749e2f68ffc\:credentialProfileName=developer

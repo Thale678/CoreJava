@@ -1,0 +1,42 @@
+package corejava.collections;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+
+public class Collections {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//Collection ,Allows duplicate element and preserve order 
+		Collection<Integer> nums = new ArrayList();
+
+		nums.add(12);
+		nums.add(15);
+		nums.add(9);
+		nums.add(120);
+
+		Iterator iterator = nums.iterator();
+
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+
+		// Collection ,Allows duplicate element and preserve order
+		List<Integer> list = new ArrayList<Integer>();
+
+		list.add(12);
+		list.add(15);
+		list.add(9);
+		list.add(120);
+
+		Iterator<Integer> listIteratore = list.iterator();
+
+		while (listIteratore.hasNext()) {
+			System.out.println(listIteratore.next());
+		}
+
+	}
+
+}

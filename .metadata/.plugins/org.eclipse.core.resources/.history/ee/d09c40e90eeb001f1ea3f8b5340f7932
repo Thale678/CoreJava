@@ -1,0 +1,79 @@
+package corejava.stream;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+public class Stream {
+
+	private static long count;
+
+	public static void main(String args[]) {
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(19);
+		list.add(139);
+		list.add(90);
+		list.add(19);
+		list.add(19);
+		list.add(38);
+		list.add(12);
+
+		List<String> names = Arrays.asList("Manish", "Dakshat", "manish", "Jitu", "tam", "sunny", "Prasad");
+
+		System.out.println(list);
+
+		// for loop using foreach
+		list.forEach(l -> System.out.println(l));
+
+		// stream functions
+		java.util.stream.Stream<Integer> filter = list.stream().filter(n -> n % 2 == 0).map(n -> n * 2).sorted();
+		count = list.stream().filter(n -> n % 2 == 0).map(n -> n * 2).sorted().count();
+		// Intemediate operation
+
+		// Filter: To Filter Data
+		// Map to modify data and store
+		// sorted to sort
+		// Distinct : returns only distinct values
+		System.out.println("Distinct");
+		list.stream().distinct().forEach(n -> System.out.println(n));
+		System.out.println(count);
+		System.out.println("***************************");
+		filter.forEach(l -> System.out.println(l));
+		System.out.println("Names");
+		names.stream().map(x -> x.toUpperCase()).distinct().filter(x -> x.contains("A"))
+				.forEach(x -> System.out.println(x));
+		// Terminate operations/short-circuit operation
+		// stops operation when conditions match
+
+		// 1.collect
+		List<String> list2 = names.stream().map(x -> x.toUpperCase()).distinct().filter(x -> x.contains("A")).toList();
+
+		// 2.for each
+		list2.forEach(x -> System.out.println(x));
+
+		// 3.reduce : it will add/concatt all values
+		Optional<String> reduce = list2.stream().reduce((x, y) -> x + y);
+		System.out.println("Reduce : " + reduce.get());
+		Optional<Integer> reduce2 = list.stream().filter(x -> x % 2 == 0).reduce((x, y) -> x + y);
+		System.out.println("Reduce : " + reduce2.get());
+
+		// 4.count : to count elements
+		System.out.println("Count : " + list.stream().filter(x -> x % 2 == 0).count());
+
+		// 5.anyMatch,allMatch,noneMatch
+
+		boolean a = list.stream().anyMatch(x -> x % 2 == 0);
+		System.out.println("AnyMatch :" + a);
+
+		boolean b = list.stream().allMatch(x -> x > 0);
+		System.out.println("AllMatch :" + b);
+
+		boolean c = list.stream().noneMatch(x -> x > 1000);
+		System.out.println("noneMatch :" + c);
+
+		// findFirst, findAny
+
+		System.out.println("findAny" + list.stream().findAny().get());
+	}
+}

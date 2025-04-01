@@ -1,0 +1,31 @@
+Collection: The root interface for all the other collection types. 
+An ordered collection that can contain duplicate elements (e.g., ArrayList, LinkedList). 
+List: 
+A collection that cannot contain duplicate elements (e.g., HashSet, TreeSet). 
+Set: 
+Queue: A collection designed for holding elements prior to processing (e.g., PriorityQueue, 
+LinkedList when used as a queue). 
+Deque: A double-ended queue that allows insertion and removal from both ends (e.g., 
+ArrayDeque). 
+Map: An interface that represents a collection of key-value pairs (e.g., HashMap, TreeMap). 
+
+The Collection interface is the root interface of the Java 
+Collection Framework. It is the most basic interface that defines 
+a group of objects known as elements. The Collection interface is 
+a part of the java.util package, and It is a parent interface that is 
+extended by other collection interfaces like List, Set, and Queue. 
+
+Since Collection is an interface, it cannot be instantiated directly; rather, it 
+provides a blueprint for the basic operations that are common to all 
+collections. 
+The Collection interface defines a set of core methods that are 
+implemented by all classes that implement the interface. These methods 
+allow for basic operations such as adding, removing, and checking the 
+existence of elements in a collection. 
+
+LIST:
+The List interface in Java is a part of the java.util package and 
+is a sub-interface of the Collection interface. It provides a 
+way to store an ordered collection of elements (known as a 
+sequence). Lists allow for precise control over where 
+elements are inserted and can contain duplicate elements. 

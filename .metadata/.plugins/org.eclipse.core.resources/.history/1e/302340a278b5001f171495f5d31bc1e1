@@ -1,0 +1,19 @@
+package corejava.basic;
+
+public class ifelse {
+	
+	
+	public static void main(String[] args) {
+	int x = 20;
+	iny y = 30;
+	
+	if(x > 10 && x <=20)  // x is greater than 10 and less than or equal to 20;
+		System.out.println("X is gretaer than 10");
+	else 
+		System.out.println("X is lesser than 10");
+	
+  
+		
+	}
+
+}

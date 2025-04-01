@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;ThisAndSuper.java&apos; to &apos;corejava/src/corejava.basic.inheritence&apos;&#x0D;&#x0A;- Original project: &apos;corejava&apos;&#x0D;&#x0A;- Destination element: &apos;corejava/src/corejava.basic.inheritence&apos;&#x0D;&#x0A;- Original element: &apos;corejava.basic.ThisAndSuper.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;corejava.basic.inheritence" element1="/src&lt;corejava.basic{ThisAndSuper.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1735905799214" units="1" version="1.0"/>
+</session>

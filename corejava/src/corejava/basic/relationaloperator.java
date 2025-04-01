@@ -1,0 +1,26 @@
+package corejava.basic;
+
+public class relationaloperator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x = 40;
+		int y = 100;
+		
+		boolean result = x < y;  //it retuen boolean value
+		//<,>,<=,>=,==,!=
+		
+		System.out.println(result);
+		
+		result = x >= y;  
+		
+		System.out.println(result);
+		
+        result = x != y;  
+		
+		System.out.println(result);
+
+	}
+
+}

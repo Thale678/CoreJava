@@ -1,0 +1,52 @@
+package corejava.basic;
+
+public class arithmaticoperators {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		int num1 = 8;
+		int num2 = 3;
+		
+		int result = num1 + num2;
+		
+		System.out.println(result);
+		result = num1 - num2;
+		System.out.println(result);
+		result = num1 * num2;
+		System.out.println(result);
+		result = num1/num2;
+		System.out.println(result);
+		result = num1%num2;
+		System.out.println(result);
+		
+		System.out.println("*********************");
+		
+		int num3 =13;
+		int num4 = 4;
+		
+		 num3 += 8;
+		System.out.println(num3);
+		num3 -= num1 - num2;
+		System.out.println(num3);
+		num3++;
+		System.out.println(num3);
+		num3--;
+		System.out.println(num3);
+		result = num1%num2;
+		System.out.println(result);
+		
+		System.out.println("*********************");
+		
+		int num5 = 40;
+		
+		System.out.println(num5++); //fetch and store 40 value to result and then increment it to 41
+		//output will be 40
+		int num6 = 50;
+		System.out.println(++num6);//incrementg the value to 51 and then store it as 51
+		//output will be 51 
+		
+	}
+
+}

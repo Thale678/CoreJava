@@ -1,0 +1,23 @@
+package corejava.basic;
+
+public class logicaloperator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x = 40;
+		int y = 100;
+		int a = 9;
+		int b = 3;
+		
+		boolean result = x < y && a < b;  //logical operators used to compare 2 boolean values
+		System.out.println(result);
+		
+		 result = x < y || a < b || a >10;
+		System.out.println(result);
+		
+		System.out.println(!result);
+
+	}
+
+}

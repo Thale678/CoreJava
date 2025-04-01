@@ -1,0 +1,106 @@
+package corejava.collector;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.LongSummaryStatistics;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.stream.Collectors;
+
+public class CollectionDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List<String> names = Arrays.asList("Manish", "Dakshat", "manish", "Jitu", "tam", "sunny", "Prasad", "Dakshat");
+
+		// to convert stream to list
+		List<String> collect = names.stream().collect(Collectors.toList());
+
+		// 4.Joining Strings
+		// Cooncat all strings in list in single string
+		System.out.println(names.stream().reduce((x, y) -> x + y).get());
+
+		String collect2 = names.stream().map(x -> x.toUpperCase()).collect(Collectors.joining(" "));
+		System.out.println("Joining String :" + collect2);
+
+		// 5.Summerize data
+		// Generate statastical summary(count,sum,min,ave,max)
+
+		List<Integer> num = Arrays.asList(34, 66, 87, 90, 33, 44, 66, 100);
+		LongSummaryStatistics collect3 = num.stream().collect(Collectors.summarizingLong(x -> x));
+		System.out.println("Summerize :" + collect3);
+		System.out.println("Avverage :" + collect3.getAverage());
+		System.out.println("getCount :" + collect3.getCount());
+		System.out.println("getMax :" + collect3.getMax());
+		System.out.println("getMin :" + collect3.getMin());
+		System.out.println("getSum :" + collect3.getSum());
+
+		// 6. Average
+		System.out.println("Average : " + num.stream().collect(Collectors.averagingInt(x -> x)));
+
+		// 7.Count
+		System.out.println("Count : " + num.stream().collect(Collectors.counting()));
+
+		// 8 GroupBy
+
+		// Group string by lentth,Generate Map with list of strings
+		Map<Integer, List<String>> collect4 = names.stream().collect(Collectors.groupingBy(x -> x.length()));
+		System.out.println("to find length of each word :" + collect4);
+
+		// Group string by length,Generate Map with concatinated string
+		Map<Integer, String> collect5 = names.stream()
+				.collect(Collectors.groupingBy(String::length, Collectors.joining(" , ")));
+		System.out.println("to find length of each word :" + collect5);
+		// Group string by length,and provide count of each gorup
+		Map<Integer, Long> collect6 = names.stream()
+				.collect(Collectors.groupingBy(String::length, Collectors.counting()));
+		System.out.println("to find length of each word :" + collect6);
+
+		// Provide count of each word in list
+		TreeMap<String, Long> collect7 = names.stream().map(x -> x.toUpperCase())
+				.collect(Collectors.groupingBy(x -> x, TreeMap::new, Collectors.counting()));
+		System.out.println("counf of words:" + collect7);
+
+		// 9 Partitioning Elements
+		// partiotion elements in two groups(false,true) on given condition
+		Map<Boolean, List<String>> collect8 = names.stream().collect(Collectors.partitioningBy(x -> x.length() > 4));
+		System.out.println("counf of words:" + collect8);
+		System.out.println(collect8.get(true).stream().collect(Collectors.counting()));
+
+		// 10. Mapping and Collecting
+		// Applies a mapping functions before collecting
+		String collect9 = names.stream().distinct()
+				.collect(Collectors.mapping(x -> x.toUpperCase(), Collectors.joining(" , ")));
+		System.out.println(collect9);
+
+		// Ea]xample to count occurence of chars
+		String sentence = "My Name is Manish , I love Java";
+		String sentence2 = "My Name is Manish , My lanuage is java ,I Love Java";
+
+		char[] charArray = sentence.toCharArray();
+
+		List<Character> namelist = new ArrayList<Character>();
+
+		for (char c : charArray) {
+			if(c.) {
+			  namelist.add(c);
+			}
+		}
+
+		System.out.println(namelist);
+
+		Map<Character, Long> collect10 = namelist.stream()
+				.collect(Collectors.groupingBy(x -> x, Collectors.counting()));
+
+		System.out.println("occurence of chars :" + collect10);
+
+		List<String> asList = Arrays.asList(sentence2.split(" "));
+
+		Map<Integer, Long> collect11 = asList.stream().map(x -> x.toUpperCase())
+				.collect(Collectors.groupingBy(x -> x.length(), Collectors.counting()));
+		System.out.println("occurence of words :" + collect11);
+	}
+
+}

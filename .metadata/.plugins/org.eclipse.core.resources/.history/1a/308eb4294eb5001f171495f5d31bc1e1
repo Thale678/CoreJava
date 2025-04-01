@@ -1,0 +1,22 @@
+package corejava.basic;
+
+public class typecasting {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        
+		int i = 12;
+		byte b =  (byte)i;
+		System.out.println(b);
+		float f = 224.89f;
+		int c = (int)f;
+		
+		System.out.println(c);
+		
+		
+		byte v = (byte)f;
+		System.out.println(v);
+		
+	}
+
+}

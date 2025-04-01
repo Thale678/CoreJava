@@ -1,0 +1,14 @@
+package corejava.basic;
+
+public class typecasting {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        
+		byte b = (byte) 127;
+		
+		System.out.println(b);
+		
+	}
+
+}

@@ -1,0 +1,101 @@
+package corejava.collections;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Collections {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//Collection ,Allows duplicate element and preserve order 
+		Collection<Integer> nums = new ArrayList();
+
+		nums.add(12);
+		nums.add(15);
+		nums.add(9);
+		nums.add(120);
+		nums.add(15);
+
+		Iterator iterator = nums.iterator();
+		System.out.println("Collection ");
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+
+		// Allows duplicate element and preserve order
+		List<Integer> list = new ArrayList<Integer>();
+
+		list.add(454);
+		list.add(23);
+		list.add(512);
+		list.add(01);
+		list.add(512);
+
+		Iterator<Integer> listIteratore = list.iterator();
+		java.util.Collections.sort(list);
+		System.out.println("\nLIST ");
+		while (listIteratore.hasNext()) {
+			System.out.println(listIteratore.next());
+		}
+
+		// No duplicate element and no preserve order
+		Set<Integer> hashset = new HashSet<Integer>();
+
+		hashset.add(454);
+		hashset.add(23);
+		hashset.add(512);
+		hashset.add(01);
+		hashset.add(512);
+
+		Iterator<Integer> hassetIterator = hashset.iterator();
+		System.out.println("\nHashSet ");
+		while (hassetIterator.hasNext()) {
+			System.out.println(hassetIterator.next());
+		}
+
+		// No duplicate element and preserve order in ascending
+		Set<Integer> treeSet = new TreeSet<Integer>();
+
+		treeSet.add(454);
+		treeSet.add(23);
+		treeSet.add(512);
+		treeSet.add(01);
+		treeSet.add(512);
+
+		Iterator<Integer> treeSetIterator = treeSet.iterator();
+		System.out.println("\nTreeSet ");
+		while (treeSetIterator.hasNext()) {
+			System.out.println(treeSetIterator.next());
+		}
+
+		// Key value pair,duplicate keys are not allowed ,duplicate values are
+		// allowed.Order not preserved
+		// if duplicate key present it will talke last inserted key
+
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("Rohit", "15");
+		map.put("Manish", "69");
+		map.put("Nikhil", "35");
+
+		map.put("Manish", "60");
+		map.put("Raj", "30");
+		map.put("Manish", "100");
+		System.out.println("\nMAP");
+		
+		System.out.println(map + "\n********************************");
+
+		for (String key : map.keySet()) {
+
+			System.out.println(key + " : " + map.get(key));
+
+		}
+	}
+
+}

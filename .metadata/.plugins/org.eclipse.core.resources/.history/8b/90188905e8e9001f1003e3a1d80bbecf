@@ -1,0 +1,61 @@
+package corejava.collections;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+public class Collections {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//Collection ,Allows duplicate element and preserve order 
+		Collection<Integer> nums = new ArrayList();
+
+		nums.add(12);
+		nums.add(15);
+		nums.add(9);
+		nums.add(120);
+		nums.add(15);
+
+		Iterator iterator = nums.iterator();
+		System.out.println("Collection ");
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+
+		// Allows duplicate element and preserve order
+		List<Integer> list = new ArrayList<Integer>();
+
+		list.add(454);
+		list.add(23);
+		list.add(512);
+		list.add(01);
+		list.add(512);
+
+		Iterator<Integer> listIteratore = list.iterator();
+		System.out.println("\nLIST ");
+		while (listIteratore.hasNext()) {
+			System.out.println(listIteratore.next());
+		}
+
+		// Allows duplicate element and preserve order
+		Set<Integer> hashset = new HashSet<Integer>();
+
+		list.add(454);
+		list.add(23);
+		list.add(512);
+		list.add(01);
+		list.add(512);
+
+		Iterator<Integer> hassetIterator = list.iterator();
+		System.out.println("\nLIST ");
+		while (listIteratore.hasNext()) {
+			System.out.println(listIteratore.next());
+		}
+
+	}
+
+}
