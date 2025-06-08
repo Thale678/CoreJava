@@ -3,7 +3,7 @@ package corejava.multithreading;
 public class Counter {
     private long count = 0;
     
-    public  void increment() {
+    public   void increment() {
         // TODO Auto-generated method stub
 
         //this method will be called by multiple threads

@@ -9,7 +9,7 @@ public class literals {
      int num1 = 0b1111;
      System.out.println(num1);
      
-     double num2 = 12e12;
+     double num2 = 1_000_00.04;
      System.out.println(num2);
      
 	}

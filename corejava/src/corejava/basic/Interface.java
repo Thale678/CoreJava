@@ -68,6 +68,7 @@ public class Interface {
 		System.out.println(Computer.IP);
 
 		laptop lap1 = new laptop();
+		int x = Computer.IP;
 		lap1.stop(); // to call defalult mehtod
 
 	}

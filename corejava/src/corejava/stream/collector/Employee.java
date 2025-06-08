@@ -1,65 +1,28 @@
 package corejava.stream.collector;
 
-public class Employee {
-
-    private int empId;
-    private String empName;
+class Employee {
+    private String name;
+    private String department;
     private int salary;
-    private Department department;
-
-    public Employee( int empId, String empName, int salary,Department department) {
-        
-        this.empId = empId;
-        this.empName = empName;
-        this.salary = salary;
+    public Employee(String name, String department, int salary) {
+        this.name = name;
         this.department = department;
+        this.salary = salary;
     }
-
-    public int getEmpId() {
-        return empId;
+    public Employee(int i, String string, int j, Department d1) {
+        //TODO Auto-generated constructor stub
     }
-
-    public void setEmpId(int empId) {
-        this.empId = empId;
+    public String getName() {
+        return name;
     }
-
-    public String getEmpName() {
-        return empName;
+    public String getDepartment() {
+        return department;
     }
-
-    public void setEmpName(String empName) {
-        this.empName = empName;
-    }
-
     public int getSalary() {
         return salary;
     }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
-
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Employee{");
-        sb.append("empId=").append(empId);
-        sb.append(", empName=").append(empName);
-        sb.append(", salary=").append(salary);
-        sb.append(", department=").append(department);
-        sb.append('}');
-        return sb.toString();
+        return "Employee [name=" + name + ", department=" + department + ", salary=" + salary + "]";
     }
-
-  
-
-    
 }

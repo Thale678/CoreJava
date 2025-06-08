@@ -1,7 +1,9 @@
 package corejava.basic.inheritence;
 
 class A {
+	
 	A() {
+	//	public static final int xx = 10;
 		System.out.println("in default A");
 	}
 
@@ -14,11 +16,12 @@ class B extends A {
 
 	B() {
 		super(23);
+		
 		System.out.println("in default B");
 	}
 
 	B(int a) {
-		this();
+		//this();
 		System.out.println("in paremetarized B");
 	}
 

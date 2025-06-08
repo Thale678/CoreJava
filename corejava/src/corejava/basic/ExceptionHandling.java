@@ -1,7 +1,5 @@
 package corejava.basic;
 
-import java.io.FileNotFoundException;
-
 class CustomException extends RuntimeException {
 	public CustomException(String msg) {
 		super(msg);

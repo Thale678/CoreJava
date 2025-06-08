@@ -6,8 +6,14 @@ package corejava.basic;
 //implementation of all abstract methods
 
 abstract class Car {
+	static{
+		System.out.println("Static Block");
+	}
+	
 
 	public abstract void drive();
+
+	public abstract void repair();
 
 	public void playmusic() {
 		System.out.println("Playing Music....");
@@ -19,6 +25,12 @@ class honda extends Car {
 	@Override
 	public void drive() {
 		System.out.println("Driving Car....");
+	}
+
+	@Override
+	public void repair() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'repair'");
 	}
 
 }

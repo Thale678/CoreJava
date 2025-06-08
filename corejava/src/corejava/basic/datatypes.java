@@ -11,6 +11,24 @@ public class datatypes {
 	String c = "c";
 	char k = 'k';
 	boolean b = true;
+
+public static void main(String[] args) {
+String s1="1236";
+
+	String s2 = new String("hi");
+	StringBuffer sb = new StringBuffer("");
+	StringBuffer sb2 = new StringBuffer("");
+
+System.out.println("S1 hashcode : "+s1.hashCode()+"\n S2 Hashcode : "+s2.hashCode());
+System.out.println("Sb hashcode : "+sb.hashCode()+"\n Sb2 Hashcode : "+sb2.hashCode());
+
+
+
+ 
+	System.out.println("String : "+s1+" : "+s2+" : "+sb);	
+}
+
+	
 	
 	
 }

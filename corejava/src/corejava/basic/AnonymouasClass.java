@@ -14,7 +14,11 @@ public class AnonymouasClass {
 		Test test = new Test();
 		test.print();
 
-		Test antest = new Test();
+		Test antest = new Test(){
+			public void print() {
+		System.out.println("Class Anonymous");
+	}
+		};
 
 		antest.print();
 	}

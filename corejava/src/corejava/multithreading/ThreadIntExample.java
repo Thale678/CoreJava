@@ -15,7 +15,7 @@ class add{
     }
 
     public synchronized void setB() {
-        b.append("b");
+        this.b.append("b");
           
       }
   
@@ -56,13 +56,13 @@ public class ThreadIntExample {
         }
         });
 
-
+     /* 
         t1.start();
         
        t2.start();
 
        t1.join();
-       t2.join();
+       t2.join();  */
       // Thread.sleep(1000);
        
         System.out.println("Values of a : " + ad.getA().length());

@@ -10,9 +10,9 @@ class Department {
 
 private int deptId;
 private String deptName;
-private String empId;
+private int empId;
 
-    public Department(int deptId, String deptName, String empId) {
+    public Department(int deptId, String deptName, int empId) {
         this.deptId = deptId;
         this.deptName = deptName;
         this.empId = empId;

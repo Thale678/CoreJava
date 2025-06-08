@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 class counter{
     private int n = 0;
     public  int factorial(int n){
-int f =1;
+ int f =1;
        System.out.println(Thread.currentThread().getName());
         for(int i=1;i<=n;i++){
             f = f*i;

@@ -1,14 +1,12 @@
 package corejava.multithreading.executer;
 
+import corejava.multithreading.Counter;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-
-import corejava.multithreading.Counter;
 
 class thread extends Thread{
 
@@ -60,7 +58,7 @@ Runnable r = () -> {
     e.printStackTrace();
 }
 ExecutorService executor = Executors.newFixedThreadPool(1);
-executor.execute(r); // It will support only runnable,which is not returning anything
+executor.execute(r);                         // It will support only runnable,which is not returning anything
 Future<Integer> submit = executor.submit(c); // It will support both runnable/callble,which will return simething.
 executor.execute(() -> {System.out.println("Hi Runnable");}); // It will support only runnable,which is not returning anything
 executor.submit(() -> {System.out.println("Hi Callable"); return 1;}); // It will support only runnable,which will return simething.
